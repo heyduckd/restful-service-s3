@@ -1,0 +1,48 @@
+{
+  "name": "restful-service-s3",
+  "version": "1.0.0",
+  "description": "RESTful service interfacing for s3",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyduckd/restful-service-s3.git"
+  },
+  "keywords": [
+    "s3",
+    "RESTful",
+    "node",
+    "mongo",
+    "javascript"
+  ],
+  "author": "David Heyduck <heyduckd@gmail.com> (http://davidheyduck.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heyduckd/restful-service-s3/issues"
+  },
+  "homepage": "https://github.com/heyduckd/restful-service-s3#readme",
+  "dependencies": {
+    "aws-sdk": "^2.2.45",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7",
+    "mongoose": "^4.4.8"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.7",
+    "mongoose": "^4.4.8"
+  }
+}
