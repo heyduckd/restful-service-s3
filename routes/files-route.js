@@ -32,12 +32,18 @@ module.exports = (apiRouter) => {
     })
   })
   .delete((req, res) => {
-    console.log('File Deleted');
     File.findById(req.params.id, (err, file) => {
+      let params = {
+        Bucket: 'dh-interfacing-s3-user-files',
+        Key: req.body.fileName
+      }
+      s3.deleteObject(params, (err, data) => {
+        if (err) handleDBError(err, res)
+      })
       File.remove((err, file) => {
-        res.type('json')
-        res.json(file)
         res.status(200)
+        res.json(file)
+        console.log('The ' + file + ' has been deleted');
         res.end()
       })
     })
